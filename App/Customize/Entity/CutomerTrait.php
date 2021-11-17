@@ -71,4 +71,45 @@ trait CustomerTrait
     $this->address = $address;
     return $this;
   }
+
+  /** Added Code form here */
+
+  /**
+   * @var string
+   *
+   * @ORM\Column(name="mobile_number")
+   * @Eccube\Annotation\FormAppend(
+   *     auto_render=false,
+   *     type="\Symfony\Component\Form\Extension\Core\Type\TextType",
+   *     options={
+   *          "required": false,
+   *          "label": "携帯電話番号",
+   *          "attr": {"placeholder": "例：09000000000"}
+   *     })
+   */
+  private $mobile_number;
+
+  /**
+   * get mobile number
+   *
+   * @return string $mobile_number
+   */
+  public function getMobileNumber()
+  {
+    return $this->mobile_number;
+  }
+
+  /**
+   * Set mobile number
+   *
+   * @param string $mobile_number
+   *
+   * @return $this
+   */
+  public function setMobileNumber($mobile_number)
+  {
+    $this->mobile_number = $mobile_number;
+    return $this;
+  }
+  /* Added codes by this line*/
 }

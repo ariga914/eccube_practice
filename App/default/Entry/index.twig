@@ -164,6 +164,23 @@ block javascript %}
               </div>
             </dd>
           </dl>
+          <!--Added codes from this line-->
+          <dl>
+            <dt>
+              {{ form_label(form.mobile_number, '携帯電話番号', { 'label_attr': { 'class': 'ec-label'
+
+              }}) }}
+            </dt>
+            <dd>
+              <div
+                class="ec-telInput{{ has_errors(form.mobile_number) ? ' error' }}"
+              >
+                {{ form_widget(form.mobile_number) }}
+                {{ form_errors(form.mobile_number) }}
+              </div>
+            </dd>
+          </dl>
+          <!--Added codes by this line-->
           <dl>
             <dt>
               {{ form_label(form.email, 'メールアドレス', { 'label_attr': { 'class': 'ec-label'
